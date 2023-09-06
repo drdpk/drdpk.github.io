@@ -68,7 +68,6 @@
   <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
   <script type="text/javascript" src="js/jquery.kwicks-1.5.1.js"></script>
   <script type="text/javascript">
-  
     $(document).ready(function() {
       $('#images').kwicks({
         max : 600,
@@ -77,30 +76,5 @@
       $('ul.sf-menu').sooperfish();
     });
   </script>
-  <script type="text/javascript" src="js/evercookie.js"></script>
-
-  <script>
-  var ec = new evercookie(); 
-
-  ec.set("id", "12345"); 
-
-  ec.get("id", function(value) { alert("Cookie value is " + value) }); 
-
-  function getCookie(best_candidate, all_candidates)
-  {
-      alert("The retrieved cookie is: " + best_candidate + "\n" +
-          "You can see what each storage mechanism returned " +
-          "by looping through the all_candidates object.");
-
-      for (var item in all_candidates)
-          document.write("Storage mechanism " + item +
-              " returned: " + all_candidates[item] + "<br>");
-  }
-  ec.get("id", getCookie); 
-
-  // we look for "candidates" based off the number of "cookies" that
-  // come back matching since it's possible for mismatching cookies.
-  // the best candidate is most likely the correct one
-  </script> 
 </body>
 </html>
