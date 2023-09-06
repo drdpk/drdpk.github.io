@@ -21,7 +21,7 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 body { 
   font: normal .80em Georgia, serif;
-  background: #eeeeee url(../images/pattern1.jpg);
+  background: #eeeeee url(../images/dna.jpg);
   color: #444;
 }
 
@@ -132,8 +132,7 @@ ol li {
 #main {
   margin: 5px auto;
   width: 940px;
-  
-  background: #eeeeee url(../images/dna.png);
+  background: transparent;
   padding-bottom: 30px;
 }
 
