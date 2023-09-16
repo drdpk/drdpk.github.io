@@ -398,6 +398,16 @@ section .container {
 .about-me .content p:last-child {
   margin-bottom: 0;
 }
+.background-demo {
+  /* Add dimentions to span */
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  /* Add background image */
+  background-image: url('https://api.iconify.design/fluent-emoji-flat/alarm-clock.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 /*--------------------------------------------------------------
 # Counts
