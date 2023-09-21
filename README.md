@@ -1,5 +1,5 @@
 # Personal Portfolio 🔥
-> https://shavejshaikh.github.io/
+> https://drdpk.github.io/
 
 ## Features 📋
 ⚡️ Fully Responsive\
