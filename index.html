@@ -5,241 +5,226 @@
 
 <head>
     <style>
-        /* CSS code for styling the website */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #f0f0f0; /* change the container color to light gray */
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: #f0f0f0; /* change the container color to light gray */
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
 
-        }
+    .logo {
+        font-size: 36px;
+        font-weight: bold;
+        color: #ffffff; /* change the logo color to white */
+    }
 
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-        }
+    .menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
 
-        .logo {
-            font-size: 36px;
-            font-weight: bold;
-            color: #333333;
-        }
+    .menu li {
+        margin-left: 20px;
+    }
 
-        .menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+    .menu li a {
+        text-decoration: none;
+        color: #333333; /* change the menu color to dark gray */
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
 
-        .menu li {
-            margin-left: 20px;
-        }
+    .menu li a:hover {
+        background-color: #999999; /* change the menu hover color to darker gray */
+    }
 
-        .menu li a {
-            text-decoration: none;
-            color: #333333;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
+    .menu li a.active {
+        background-color: #ffffff; /* change the menu active color to white */
+        color: #333333;
+    }
 
-        .menu li a:hover {
-            background-color: #cccccc;
-        }
+    .banner {
+        height: 400px;
+        background-image: url; /* image of DNA */
+        background-size: cover;
+        background-position: center;
+    }
 
-        .menu li a.active {
-            background-color: #999999;
-            color: #ffffff;
-        }
+    .content {
+        padding: 40px;
+    }
 
-        .banner {
-            height: 400px;
-            background-image: url(^5^); /* image of DNA */
-            background-size: cover;
-            background-position: center;
-        }
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff; /* change the title color to white */
+        margin-bottom: 20px;
+    }
 
-        .content {
-            padding: 40px;
-        }
+    .text {
+        font-size: 18px;
+        color: #ffffff; /* change the text color to white */
+        line-height: 1.5;
+    }
 
-        .title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #333333;
-            margin-bottom: 20px;
-        }
+    .slideshow {
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
 
-        .text {
-            font-size: 18px;
-            color: #333333;
-            line-height: 1.5;
-        }
+    .slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0; /* hide all slides by default */
+        transition: opacity 1s ease-in-out; /* fade effect */
+    }
 
-        .slideshow {
-            width: 800px;
-            height: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* scale and crop images */
+    }
 
-        .slide {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0; /* hide all slides by default */
-            transition: opacity 1s ease-in-out; /* fade effect */
-        }
+    .slide.active {
+        opacity: 1; /* show the active slide */
+    }
 
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* scale and crop images */
-        }
+    .prev, .next {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgba(255,255,255,0.5); /* change the button color to semi-transparent white */
+        color: #333333; /* change the button text color to dark gray */
+        font-size: 24px;
+        text-align: center;
+        line-height: 50px; /* vertically center the arrow */
+        position: absolute; 
+        top: 50%;
+        transform: translateY(-50%); /* move the buttons to the middle */
+        cursor:pointer; /* change the cursor on hover */
+    }
 
-        .slide.active {
-            opacity: 1; /* show the active slide */
-        }
+    .prev {
+       left :10px; 
+    }
+    
+     .next {
+       right :10px; 
+     }
+    
+     .prev:hover, .next:hover {
+       background-color :rgba(255,255,255,0.8); /* brighten the button color on hover */
+     }
+    
+     .dots {
+       display :flex; 
+       justify-content :center; 
+       margin-top :20px; 
+     }
+    
+     .dot {
+       width :15px; 
+       height :15px; 
+       border-radius :50%; 
+       background-color :#cccccc; /* change the dot color to light gray */
+       margin :0 5px; 
+       cursor:pointer; /* change the cursor on hover */
+     }
+    
+     .dot.active {
+       background-color :#333333; /* change the dot color to dark gray */
+     }
+    
+     @media (max-width :800px) { /* responsive design for smaller screens */
+       .slideshow { 
+         width :100%; 
+         height :300px; 
+       }
+       
+       .prev, .next { 
+         width :30px; 
+         height :30px; 
+         font-size :18px; 
+         line-height :30px; 
+       }
+       
+       .dots { 
+         margin-top :10px; 
+       }
+     }
+    
+     @media (max-width :600px) { /* responsive design for smaller screens */
+       .menu { 
+         flex-direction :column; /* stack the menu items vertically */
+         align-items :center; /* center the menu items horizontally */
+       }
+       
+       .menu li { 
+         margin-left :0; /* remove the left margin */
+         margin-bottom :10px; /* add some bottom margin */
+       }
+       
+       .banner { 
+         height :200px; /* reduce the banner height */
+       }
+       
+       .content { 
+         padding :20px; /* reduce the content padding */
+       }
+     }
 
-        .prev, .next {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: rgba(0,0,0,0.5);
-            color: #ffffff;
-            font-size: 24px;
-            text-align: center;
-            line-height: 50px; /* vertically center the arrow */
-            position: absolute; 
-            top: 50%;
-            transform: translateY(-50%); /* move the buttons to the middle */
-            cursor:pointer; /* change the cursor on hover */
-        }
+    .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-        .prev {
-           left :10px; 
-        }
-        
-         .next {
-           right :10px; 
-         }
-        
-         .prev:hover, .next:hover {
-           background-color :rgba(0,0,0,0.8); 
-         }
-        
-         .dots {
-           display :flex; 
-           justify-content :center; 
-           margin-top :20px; 
-         }
-        
-         .dot {
-           width :15px; 
-           height :15px; 
-           border-radius :50%; 
-           background-color :#cccccc; 
-           margin :0 5px; 
-           cursor:pointer; /* change the cursor on hover */
-         }
-        
-         .dot.active {
-           background-color :#333333; 
-         }
-        
-         @media (max-width :800px) { /* responsive design for smaller screens */
-           .slideshow { 
-             width :100%; 
-             height :300px; 
-           }
-           
-           .prev, .next { 
-             width :30px; 
-             height :30px; 
-             font-size :18px; 
-             line-height :30px; 
-           }
-           
-           .dots { 
-             margin-top :10px; 
-           }
-         }
-        
-         @media (max-width :600px) { /* responsive design for smaller screens */
-           .menu { 
-             flex-direction :column; /* stack the menu items vertically */
-             align-items :center; /* center the menu items horizontally */
-           }
-           
-           .menu li { 
-             margin-left :0; /* remove the left margin */
-             margin-bottom :10px; /* add some bottom margin */
-           }
-           
-           .banner { 
-             height :200px; /* reduce the banner height */
-           }
-           
-           .content { 
-             padding :20px; /* reduce the content padding */
-           }
-         }
+    .list li {
+        margin-bottom: 10px;
+    }
 
-        .list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+    .list li a {
+        text-decoration: none;
+        color: #ffffff; /* change the list link color to white */
+    }
 
-        .list li {
-            margin-bottom: 10px;
-        }
+    .list li a:hover {
+        text-decoration: underline; /* add an underline to the list link on hover */
+    }
 
-        .list li a {
-            text-decoration: none;
-            color: #333333;
-        }
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
-        .list li a:hover {
-            text-decoration: underline;
-        }
+    .social a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
 
-        .social {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
+    .social a img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* scale and fit images */
+    }
 
-        .social a {
-            display: block;
-            width: 40px;
-            height: 40px;
-            margin: 0 10px;
-        }
-
-        .social a img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* scale and fit images */
-        }
-        .ribbon { width: 100%; 
-          height: 50px; 
-          background-color: #333333; 
-          color: #ffffff; 
-          font-size: 18px; 
-          text-align: center; 
-          line-height: 50px; 
-        } 
 
 
     </style>
