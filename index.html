@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
+<!-- Back to top button --> <a href=“#top” id=“back-to-top”>Back to top</a>
 
 <head>
     <style>
@@ -229,6 +229,14 @@
             height: 100%;
             object-fit: contain; /* scale and fit images */
         }
+        #back-to-top { display: none; /* hide the button by default / position: fixed; / keep the button in the same place / bottom: 20px; / position the button from the bottom / right: 20px; / position the button from the right / width: 50px; / set the button width / height: 50px; / set the button height / border-radius: 50%; / make the button circular / background-color: rgba(0,0,0,0.5); / set the button color to semi-transparent black / color: #ffffff; / set the button text color to white / font-size: 18px; / set the button text size / text-align: center; / center the button text horizontally / line-height: 50px; / center the button text vertically / text-decoration: none; / remove the underline from the link */ }
+
+          #back-to-top:hover {
+              background-color: rgba(0,0,0,0.8); /* darken the button color on hover */
+          }
+
+
+
     </style>
 </head>
 <body>
@@ -341,6 +349,21 @@
                             }
                             dots[n].classList.add("active");
                         }
+
+
+                        // Get the button element var backToTop = document.getElementById(“back-to-top”);
+
+                        // Add an event listener for scrolling
+                        window.addEventListener("scroll", function() {
+                          // If the scroll position is more than 100 pixels from the top, show the button
+                          if (window.scrollY > 100) {
+                              backToTop.style.display = "block";
+                          }
+                          // Otherwise, hide the button
+                          else {
+                              backToTop.style.display = "none";
+                          }
+                        });               
                     </script>
                 </div>
             </div>
@@ -423,8 +446,7 @@
                    
                     </div>
                 </div>
-                <!-- I'll try to rewr -->
-                          
+
           </body> </html>
           
           <!-- HTML code ends here -->
