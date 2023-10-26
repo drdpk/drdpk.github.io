@@ -1,67 +1,321 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <style>
+        /* CSS code for styling the website */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #333333;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .menu li a:hover {
+            background-color: #cccccc;
+        }
+
+        .menu li a.active {
+            background-color: #999999;
+            color: #ffffff;
+        }
+
+        .banner {
+            height: 400px;
+            background-image: url(^5^); /* image of DNA */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .slideshow {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0; /* hide all slides by default */
+            transition: opacity 1s ease-in-out; /* fade effect */
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* scale and crop images */
+        }
+
+        .slide.active {
+            opacity: 1; /* show the active slide */
+        }
+
+        .prev, .next {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.5);
+            color: #ffffff;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px; /* vertically center the arrow */
+            position: absolute; 
+            top: 50%;
+            transform: translateY(-50%); /* move the buttons to the middle */
+            cursor:pointer; /* change the cursor on hover */
+        }
+
+        .prev {
+           left :10px; 
+        }
+        
+         .next {
+           right :10px; 
+         }
+        
+         .prev:hover, .next:hover {
+           background-color :rgba(0,0,0,0.8); 
+         }
+        
+         .dots {
+           display :flex; 
+           justify-content :center; 
+           margin-top :20px; 
+         }
+        
+         .dot {
+           width :15px; 
+           height :15px; 
+           border-radius :50%; 
+           background-color :#cccccc; 
+           margin :0 5px; 
+           cursor:pointer; /* change the cursor on hover */
+         }
+        
+         .dot.active {
+           background-color :#333333; 
+         }
+        
+         @media (max-width :800px) { /* responsive design for smaller screens */
+           .slideshow { 
+             width :100%; 
+             height :300px; 
+           }
+           
+           .prev, .next { 
+             width :30px; 
+             height :30px; 
+             font-size :18px; 
+             line-height :30px; 
+           }
+           
+           .dots { 
+             margin-top :10px; 
+           }
+         }
+        
+         @media (max-width :600px) { /* responsive design for smaller screens */
+           .menu { 
+             flex-direction :column; /* stack the menu items vertically */
+             align-items :center; /* center the menu items horizontally */
+           }
+           
+           .menu li { 
+             margin-left :0; /* remove the left margin */
+             margin-bottom :10px; /* add some bottom margin */
+           }
+           
+           .banner { 
+             height :200px; /* reduce the banner height */
+           }
+           
+           .content { 
+             padding :20px; /* reduce the content padding */
+           }
+         }
+
+        .list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list li {
+            margin-bottom: 10px;
+        }
+
+        .list li a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .list li a:hover {
+            text-decoration: underline;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        .social a img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* scale and fit images */
+        }
+    </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Biotechnologist's Portfolio&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Add your CSS styles here */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#bio"&gt;Bio&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#publications"&gt;Publications&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#research"&gt;Research&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="home"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add a slideshow of DNA images here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add some text about you and your research here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="bio"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add your bio here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="publications"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Journals&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add a list of journals with hyperlinks here --&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Conferences&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add a list of conferences with hyperlinks here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="research"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add a list of projects followed by the details of each project here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="contact"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add logos of Facebook, LinkedIn, Gmail, Outlook, and Twitter with hyperlinks here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Add your footer here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
-</html>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Biotechnology</div>
+            <ul class="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="banner"></div>
+        <div class="content">
+            <div id="home">
+                <h1 class="title">Welcome to my website</h1>
+                <p class="text">I am a biotechnologist and I am working on DNA based data storage. I have done PhD in this field and I have published a few research journals and book chapters. I have also presented my work in some international conferences. Currently I am working at NUS as a postdoctoral researcher.</p>
+                <p class="text">My research interests include DNA synthesis, sequencing, encoding, decoding, error correction, and compression. I am fascinated by the potential of DNA as a universal and durable medium for storing digital information. I am also interested in the applications of DNA data storage in biotechnology, medicine, and security.</p>
+                <p class="text">Here you can find more information about me, my publications, my research projects, and how to contact me. I hope you enjoy browsing my website and learning more about my work.</p>
+                <div class="slideshow">
+                    <!-- Slides -->
+                    <div class="slide active">
+                        <img src="^6^" alt="DNA image 1"> <!-- image of DNA -->
+                    </div>
+                    <div class="slide">
+                        <img src="^7^" alt="DNA image 2"> <!-- image of DNA -->
+                    </div>
+                    <div class="slide">
+                        <img src="^8^" alt="DNA image 3"> <!-- image of DNA -->
+                    </div>
+                    <div class="slide">
+                        <img src="^9^" alt="DNA image 4"> <!-- image of DNA -->
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="prev">&#10094;</div>
+                    <div class="next">&#10095;</div>
+
+                    <!-- Dots -->
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                    <!-- Script for slideshow functionality -->
+                    <script>
+                        // Get the elements
+                        var slides = document.getElementsByClassName("slide");
+                        var dots = document.getElementsByClassName("dot");
+                        var prev = document.getElementsByClassName("prev")[0];
+                        var next = document.getElementsByClassName("next")[0];
+
+                        // Set the initial index
+                        var index = 0;
+
+                        // Show the first slide
+                        showSlide(index);
+
+                        // Add event listeners for buttons
+                        prev.addEventListener("click", function() {
+                            // Decrease the index by 1
+                            index--;
+                            // Show the slide
+                            showSlide(index);
+                        });
+
+                        next.addEventListener("click", function() {
+                            // Increase the index by 1
+                            index++;
+                            // Show the slide
+                            showSlide(index);
+                        });
+
+                        // Add event listeners for dots
+                        for (var i = 0; i < dots.length; i++) {
+                            dots[i].addEventListener("click", function() {
+                                // Get the index of the clicked dot
+                                var dotIndex = Array.prototype.indexOf.call(dots, this);
+                                // Set the index to the dot index
+                                index = dotIndex;
+                                // Show the slide
+                                showSlide(index);
+                            });
+                        }
+
+                        // Function to show a slide
+                        function showSlide(n) {
+                            // If.
+
