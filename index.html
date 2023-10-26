@@ -245,12 +245,10 @@
           text-decoration: none; 
         }
 
-#back-to-top:hover {
-    background-color: rgba(0,0,0,0.8); /* darken the button color on hover */
-}
         #back-to-top:hover {
-              background-color: rgba(0,0,0,0.8); 
+            background-color: rgba(0,0,0,0.8); /* darken the button color on hover */
         }
+        
         
         .ribbon { width: 100%; 
           height: 50px; 
@@ -374,6 +372,11 @@
                             }
                             dots[n].classList.add("active");
                         }
+
+                        // Get the button element var 
+                        backToTop = document.getElementById(“back-to-top”);
+
+
                         // Add an event listener for scrolling
                         window.addEventListener("scroll", function() {
                           // If the scroll position is more than 100 pixels from the top, show the button
@@ -388,7 +391,7 @@
                           else {
                               backToTop.style.display = "none";
                           }
-                        }
+                        });
 
                     </script>
                 </div>
