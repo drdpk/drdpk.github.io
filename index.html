@@ -4,7 +4,6 @@
 
 
 <head>
-  <!-- Back to top button --> 
     <style>
         /* CSS code for styling the website */
         body {
@@ -230,28 +229,6 @@
             height: 100%;
             object-fit: contain; /* scale and fit images */
         }
-        #back-to-top { 
-          display: none; 
-          position: fixed; 
-          bottom: 20px; 
-          right: 20px; 
-          width: 50px; 
-          height: 50px; 
-          border-radius: 50%; 
-          background-color: rgba(0,0,0,0.5); 
-          color: #ffffff; 
-          font-size: 18px; 
-          text-align: center; 
-          line-height: 50px; 
-          text-decoration: none; 
-          z-index: 10;
-        }
-
-        #back-to-top:hover {
-            background-color: rgba(0,0,0,0.8); /* darken the button color on hover */
-        }
-        
-        
         .ribbon { width: 100%; 
           height: 50px; 
           background-color: #333333; 
@@ -266,7 +243,6 @@
 </head>
 <body>
     <div class="container">
-      <a href=“#top” id=“back-to-top”>Back to top</a>
         <div class="header">
             <div class="logo">Biotechnology</div>
             <ul class="menu">
@@ -376,25 +352,6 @@
                             dots[n].classList.add("active");
                         }
 
-                        // Get the button element var 
-                        backToTop = document.getElementById("back-to-top");
-
-
-                        // Add an event listener for scrolling
-                        window.addEventListener("scroll", function() {
-                          // If the scroll position is more than 100 pixels from the top, show the button
-                          if (window.scrollY > 100) {
-                              backToTop.style.display = "block";
-                              // Set a timeout to hide the button after 5 seconds
-                              setTimeout(function() {
-                                  backToTop.style.display = "none";
-                              }, 5000);
-                          }
-                          // Otherwise, hide the button
-                          else {
-                              backToTop.style.display = "none";
-                          }
-                        });
 
                     </script>
                 </div>
