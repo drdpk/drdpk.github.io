@@ -136,7 +136,30 @@
         object-fit: contain; /* scale and fit images */
     }
 
+    .section { width: 100%; 
+      padding: 20px; 
+    }
 
+    .row {
+        display: flex; /* use flexbox to arrange the columns */
+    }
+    
+    .column {
+        width: 50%; /* set the column width to half of the row width */
+        padding: 10px; /* add some padding around the column */
+    }
+    
+    .column img {
+        width: 100%; /* set the image width to the full column width */
+        height: auto; /* adjust the image height to maintain aspect ratio */
+        object-fit: cover; /* scale and crop the image to fit the column */
+    }
+    
+    .text {
+        font-size: 18px;
+        color: #333333;
+        line-height: 1.5;
+    }
 
     </style>
 </head>
@@ -230,7 +253,14 @@
 
                 </div>
             </div>
-
+            <div class=“section”> <!-- Divide the screen in two parts --> 
+              <div class=“row”> <!-- First part for image --> 
+                <div class=“column”> <img src=“[Image]” alt=“Image”> <!-- image from the search results --> </div> 
+                <!-- Second part for text --> 
+                <div class=“column”> <p class=“text”>This is some text for the second part of the section. You can write anything you want here.</p> 
+                </div> 
+              </div> 
+            </div>
             <!-- Back to top button -->
             <!-- <a href="#top" id="back-to-top"><img src="[Up_arrow_icon.jpeg]" alt="Up arrow icon"></a> image of up arrow icon -->
 
