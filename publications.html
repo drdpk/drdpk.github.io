@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #d5d5d5; /* change the container color to light gray */
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+        font-weight: bold;
+        color: #000000; /* change the logo color to white */
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        margin-left: 20px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #333333; /* change the menu color to dark gray */
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    .menu li a:hover {
+        background-color: #efefef; /* change the menu hover color to darker gray */
+    }
+
+    .menu li a.active {
+        background-color: #ffffff; /* change the menu active color to white */
+        color: #333333;
+    }
+
+    .banner {
+        height: 400px;
+        background-image: url("images/dna2.jpeg"); /* image of DNA */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content {
+        padding: 40px;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #000000; /* change the title color to white */
+        margin-bottom: 20px;
+    }
+
+    .text {
+        font-size: 18px;
+        color: #000000; /* change the text color to white */
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    
+     @media (max-width :600px) { /* responsive design for smaller screens */
+       .menu { 
+         flex-direction :column; /* stack the menu items vertically */
+         align-items :center; /* center the menu items horizontally */
+       }
+       
+       .menu li { 
+         margin-left :0; /* remove the left margin */
+         margin-bottom :10px; /* add some bottom margin */
+       }
+       
+       .banner { 
+         height :200px; /* reduce the banner height */
+       }
+       
+       .content { 
+         padding :20px; /* reduce the content padding */
+       }
+     }
+
+    .list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .list li {
+        margin-bottom: 10px;
+    }
+
+    .list li a {
+        text-decoration: none;
+        color: #000000; /* change the list link color to white */
+        text-align: justify;
+    }
+
+    .list li a:hover {
+        text-decoration: underline; /* add an underline to the list link on hover */
+        text-align: justify;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .social a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    .social a img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* scale and fit images */
+    }
+
+    .section { width: 100%; 
+      padding: 20px; 
+    }
+
+    .row {
+        display: flex; /* use flexbox to arrange the columns */
+    }
+    
+    .column {
+        width: 50%; /* set the column width to half of the row width */
+        padding: 10px; /* add some padding around the column */
+    }
+    
+    .column img {
+        width: 100%; /* set the image width to the full column width */
+        height: auto; /* adjust the image height to maintain aspect ratio */
+        object-fit: cover; /* scale and crop the image to fit the column */
+    }
+    
+    .text {
+        font-size: 18px;
+        color: #333333;
+        line-height: 1.5;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Add an id for the top of the page -->
+    <div id="top"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Dr Deepak Sharma</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="publications.html" class = "active">Publications</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+
+            <!-- Publications section -->
+            <div id="publications">
+                <h1 class="title">My publications</h1>
+                <p class="text">Here is a list of my publications in journals and conferences. You can click on the links to access the full papers or abstracts.</p>
+                <!-- List of journals -->
+                <h2 class="title">Journals</h2>
+                <ul class="list">
+                    <li><a href="[Nature Biotechnology]">Sharma D. and Ramteke M., In Vitro Identification of the Hamiltonian Cycle Using a Circular Structure Assisted DNA Computer, ACS Combinatorial Science, 22, no. 5, (2020): 225 - 231.</a></li>
+                    <li><a href="[IEEE Transactions on Information Theory]">Sharma D. and Ramteke M., A Note on Short-term Scheduling of Multi-grade Polymer Plant using DNA Computing, Chemical Engineering Research and Design, 135 (2018): 78 - 93.</a></li>
+                    </ul>
+                      
+            <!-- List of conferences -->
+            <h2 class="title">Conferences</h2>
+            <ul class="list">
+                <li><a href="[ICDE]">Sharma D., Fageria A., and Ramteke M., Computing using DNA, Open House, Indian Institute of Technology Delhi, New Delhi, India, 2016.</a></li>
+                <li><a href="[ICDE]">Sharma D. and Ramteke M., Modeling of gelatin grafted PMMA polymerization, International conference on Advanced Polymeric Materials, Kottayam, Kerala, India, 2013.</a></li>
+                <li><a href="[ICDE]">Sharma D. and Ramteke M., DNA mediated Logic Gates, The Sixth International Conference on Advances in Computing, Communication, and Information Technology, Zurich, Switzerland, 2018.</a></li>
+            </ul>
+
+            <h2 class="title">Book Chapters</h2>
+            <ul class="list">
+                <li><a href="[ICDE]">Sharma D. and Ramteke M., DNA computing: methodologies and challenges, DNA and RNA-Based Computing Systems, Wiley Online Library (2021): 15-29.</a></li>
+                <li><a href="[ICDE]">Sharma D. and Ramteke M., DNA Computing based Big Data Storage. Elsevier.</a></li>
+            </ul>
+            
+            
+            
+            <!-- Ribbon section -->
+            <div class="ribbon">
+                © 2023 Deepak Sharma. All rights reserved.
+            </div>
+            </div>
+            </body>
+            </html>
