@@ -6,7 +6,7 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        background-color: #d5d5d5; /* change the container color to light gray */
+        background-color: #ffffff; /* change the container color to light gray */
     }
 
     .header {
@@ -41,11 +41,11 @@
     }
 
     .menu li a:hover {
-        background-color: #efefef; /* change the menu hover color to darker gray */
+        background-color: #1afbff; /* change the menu hover color to darker gray */
     }
 
     .menu li a.active {
-        background-color: #ffffff; /* change the menu active color to white */
+        background-color: #30fffc; /* change the menu active color to white */
         color: #333333;
     }
 
@@ -155,12 +155,19 @@
         object-fit: cover; /* scale and crop the image to fit the column */
     }
     
-    .text {
-        font-size: 18px;
-        color: #333333;
-        line-height: 1.5;
-    }
 
+    .bg-text {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        background-image: url("images/dna6.jpeg");
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        border: 3px solid #f1f1f1;
+        width: absolute;
+        padding: 20px;
+        text-align: center;
+      }
     </style>
 </head>
 <body>
@@ -176,6 +183,8 @@
                 <li><a href="contact.html" class = "active">Contact</a></li>
             </ul>
         </div>
+        <div class="bg-text">Welcome to my webpage! I am Dr Deepak Sharma</div>
+
         <div class="content">
             <!-- Contact section -->
             <div id="contact">
