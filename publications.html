@@ -165,6 +165,7 @@
     }
     
     
+   
     .bg-text {
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -172,11 +173,22 @@
         color: white;
         font-weight: bold;
         font-size: 30px;
-        border: 3px solid #f1f1f1;
         width: absolute;
         padding: 60px;
         text-align: center;
+
       }
+
+      img.background {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
+        filter: blur(8px);
+        }
     </style>
 </head>
 <body>
@@ -192,6 +204,9 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             </div>
+        
+        <img class="background" src="images/dna3.jpeg" alt="Aleq">
+
         <div class="bg-text">Welcome to my webpage! I am Dr Deepak Sharma</div>
 
         <div class="content">

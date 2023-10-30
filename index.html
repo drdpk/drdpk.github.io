@@ -6,11 +6,7 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        /*background-image: url("images/dna17.jpeg"); /* image of DNA */
-        background-size: cover;
-        background-position: center;
-        
-        
+        background-color: #ffffff; /* change the container color to light gray */
     }
 
     .header {
@@ -45,17 +41,17 @@
     }
 
     .menu li a:hover {
-      background-color: #0daec0; /* change the menu hover color to darker gray */
-  }
+        background-color: #0daec0; /* change the menu hover color to darker gray */
+    }
 
-  .menu li a.active {
-      background-color: #0daec0; /* change the menu active color to white */
-      color: #ffffff;
-  }
+    .menu li a.active {
+        background-color: #0daec0; /* change the menu active color to white */
+        color: #ffffff;
+    }
 
     .banner {
         height: 400px;
-        background-image: url("images/dna6.jpeg"); /* image of DNA */
+        background-image: url("images/dna2.jpeg"); /* image of DNA */
         background-size: cover;
         background-position: center;
     }
@@ -77,14 +73,14 @@
         line-height: 1.5;
         text-align: justify;
     }
-
     .ribbon {
-      font-size: 10px;
-      color: #ffffff; /* change the text color to white */
-      text-align: right;
-      background-color: #0daec0;
-      padding: 5px;
-  }
+        font-size: 10px;
+        color: #ffffff; /* change the text color to white */
+        text-align: right;
+        background-color: #0daec0;
+        padding: 5px;
+    }
+    
      @media (max-width :600px) { /* responsive design for smaller screens */
        .menu { 
          flex-direction :column; /* stack the menu items vertically */
@@ -113,6 +109,7 @@
 
     .list li {
         margin-bottom: 10px;
+        text-align: justify;
     }
 
     .list li a {
@@ -164,19 +161,32 @@
         height: auto; /* adjust the image height to maintain aspect ratio */
         object-fit: cover; /* scale and crop the image to fit the column */
     }
+    
+
+
     .bg-text {
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-      background-image: url("images/dna6.jpeg");
-      color: white;
-      font-weight: bold;
-      font-size: 30px;
-      border: 3px solid #f1f1f1;
-      width: absolute;
-      padding: 60px;
-      text-align: center;
-    }
- 
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        background-image: url("images/dna6.jpeg");
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        width: absolute;
+        padding: 60px;
+        text-align: center;
+
+      }
+
+      img.background {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
+        filter: blur(8px);
+        }
     </style>
 </head>
 <body>
@@ -193,6 +203,7 @@
             </ul>
         </div>
       
+        <img class="background" src="images/dna3.jpeg" alt="Aleq">
 
         <div class="bg-text">Welcome to my webpage! I am Dr Deepak Sharma</div>
 
