@@ -6,7 +6,11 @@
       .container {
         max-width: 1200px;
         margin: 0 auto;
-        background-color: #d5d5d5; /* change the container color to light gray */
+        /*background-image: url("images/dna17.jpeg"); /* image of DNA */
+        background-size: cover;
+        background-position: center;
+        
+        
     }
 
     .header {
@@ -41,17 +45,17 @@
     }
 
     .menu li a:hover {
-        background-color: #efefef; /* change the menu hover color to darker gray */
+        background-color: #1afbff; /* change the menu hover color to darker gray */
     }
 
     .menu li a.active {
-        background-color: #ffffff; /* change the menu active color to white */
+        background-color: #30fffc; /* change the menu active color to white */
         color: #333333;
     }
 
     .banner {
         height: 400px;
-        background-image: url("images/dna2.jpeg"); /* image of DNA */
+        background-image: url("images/dna6.jpeg"); /* image of DNA */
         background-size: cover;
         background-position: center;
     }
@@ -154,13 +158,23 @@
         height: auto; /* adjust the image height to maintain aspect ratio */
         object-fit: cover; /* scale and crop the image to fit the column */
     }
-    
-    .text {
-        font-size: 18px;
-        color: #333333;
-        line-height: 1.5;
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      background-image: url("images/dna6.jpeg");
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 60%;
+      padding: 80px;
+      text-align: center;
     }
-
+ 
     </style>
 </head>
 <body>
@@ -176,7 +190,10 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="banner"></div>
+        <div class="banner">
+          <p class="bg-text">Welcome to my webpage! I am Dr Deepak Sharma</p>
+                 
+        </div>
         <div class="content">
             <!-- Home section -->
             <div id="home">
@@ -186,6 +203,10 @@
                   <p class="text">Besides DNA data storage, I also have experience in computer vision for medical images. I have a good understanding of deep learning and machine learning, which are essential tools for analyzing and processing large amounts of data. I have applied these skills to various problems such as image segmentation, classification, and reconstruction.</p>
                   <p class="text">I am always eager to learn new things and collaborate with other researchers who share my interests. If you want to know more about me and my work, please feel free to browse through my webpage. You can also contact me via email or social media. Thank you for visiting!</p>
             </div>   
+
+            
+
+
             <!-- Ribbon section -->
             <div class="ribbon">
                 © 2023 Deepak Sharma. All rights reserved.
