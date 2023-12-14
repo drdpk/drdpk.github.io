@@ -3,210 +3,204 @@
 <html>
 <head>
     <style>
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: #ffffff; /* change the container color to light gray */
-    }
-
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .logo {
-        font-size: 36px;
-        font-weight: bold;
-        color: #000000; /* change the logo color to white */
-    }
-
-    .menu {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu li {
-        margin-left: 20px;
-    }
-
-    .menu li a {
-        text-decoration: none;
-        color: #333333; /* change the menu color to dark gray */
-        padding: 10px 15px;
-        border-radius: 5px;
-    }
-
-    .menu li a:hover {
-        background-color: #0daec0; /* change the menu hover color to darker gray */
-    }
-
-    .menu li a.active {
-        background-color: #0daec0; /* change the menu active color to white */
-        color: #ffffff;
-    }
-
-    .banner {
-        height: 400px;
-        background-image: url("images/dna2.jpeg"); /* image of DNA */
-        background-size: cover;
-        background-position: center;
-    }
-
-    .content {
-        padding: 40px;
-    }
-
-    .title {
-        font-size: 28px;
-        font-weight: bold;
-        color: #000000; /* change the title color to white */
-        margin-bottom: 20px;
-    }
-
-    .text {
-        font-size: 18px;
-        color: #000000; /* change the text color to white */
-        line-height: 1.5;
-        text-align: justify;
-    }
-    .ribbon {
-        font-size: 10px;
-        color: #ffffff; /* change the text color to white */
-        text-align: right;
-        background-color: #0daec0;
-        padding: 5px;
-    }
-    
-     @media (max-width :600px) { /* responsive design for smaller screens */
-       .menu { 
-         flex-direction :column; /* stack the menu items vertically */
-         align-items :center; /* center the menu items horizontally */
-       }
-       
-       .menu li { 
-         margin-left :0; /* remove the left margin */
-         margin-bottom :10px; /* add some bottom margin */
-       }
-       
-       .banner { 
-         height :200px; /* reduce the banner height */
-       }
-       
-       .content { 
-         padding :20px; /* reduce the content padding */
-       }
-     }
-
-    .list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .list li {
-        margin-bottom: 10px;
-        text-align: justify;
-    }
-
-    .list li a {
-        text-decoration: none;
-        color: #000000; /* change the list link color to white */
-        text-align: justify;
-    }
-
-    .list li a:hover {
-        text-decoration: underline; /* add an underline to the list link on hover */
-        text-align: justify;
-    }
-
-    .social {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    .social a {
-        display: block;
-        width: 40px;
-        height: 40px;
-        margin: 0 10px;
-    }
-
-    .social a img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* scale and fit images */
-    }
-
-    .section { width: 100%; 
-      padding: 20px; 
-    }
-
-    .row {
-        display: flex; /* use flexbox to arrange the columns */
-    }
-    
-    .column {
-        width: 50%; /* set the column width to half of the row width */
-        padding: 10px; /* add some padding around the column */
-    }
-    
-    .column img {
-        width: 100%; /* set the image width to the full column width */
-        height: auto; /* adjust the image height to maintain aspect ratio */
-        object-fit: cover; /* scale and crop the image to fit the column */
-    }
-    
-
-
-    .bg-text {
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-        background-image: url("images/dna6.jpeg");
-        color: white;
-        font-weight: bold;
-        font-size: 30px;
-        width: absolute;
-        padding: 60px;
-        text-align: center;
-
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          background-color: #ffffff; /* change the container color to light gray */
       }
-
-      img.background {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
-        filter: blur(8px);
+  
+      .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+      }
+  
+      .logo {
+          font-size: 36px;
+          font-weight: bold;
+          color: #000000; /* change the logo color to white */
+      }
+  
+      .menu {
+          list-style: none;
+          display: flex;
+          margin: 0;
+          padding: 0;
+      }
+  
+      .menu li {
+          margin-left: 20px;
+      }
+  
+      .menu li a {
+          text-decoration: none;
+          color: #333333; /* change the menu color to dark gray */
+          padding: 10px 15px;
+          border-radius: 5px;
+      }
+  
+      .menu li a:hover {
+          background-color: #0daec0; /* change the menu hover color to darker gray */
+      }
+  
+      .menu li a.active {
+          background-color: #0daec0; /* change the menu active color to white */
+          color: #ffffff;
+      }
+  
+      .banner {
+          height: 400px;
+          background-image: url("images/dna2.jpeg"); 
+          background-size: cover;
+          background-position: center;
+  
+      }
+  
+      .content {
+          padding: 40px;
+      }
+  
+      .title {
+          font-size: 28px;
+          font-weight: bold;
+          color: #000000; /* change the title color to white */
+          margin-bottom: 20px;
+      }
+  
+      .text {
+          font-size: 18px;
+          color: #000000; /* change the text color to white */
+          line-height: 1.5;
+          text-align: justify;
+      }
+      .ribbon {
+          font-size: 10px;
+          color: #ffffff; /* change the text color to white */
+          text-align: right;
+          background-color: #0daec0;
+          padding: 5px;
+      }
+      
+       @media (max-width :600px) { /* responsive design for smaller screens */
+         .menu { 
+           flex-direction :column; /* stack the menu items vertically */
+           align-items :center; /* center the menu items horizontally */
+         }
+         
+         .menu li { 
+           margin-left :0; /* remove the left margin */
+           margin-bottom :10px; /* add some bottom margin */
+         }
+         
+         .banner { 
+           height :200px; /* reduce the banner height */
+         }
+         
+         .content { 
+           padding :20px; /* reduce the content padding */
+         }
+       }
+  
+      .list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+      }
+  
+      .list li {
+          margin-bottom: 10px;
+          text-align: justify;
+      }
+  
+      .list li a {
+          text-decoration: none;
+          color: #000000; /* change the list link color to white */
+          text-align: justify;
+      }
+  
+      .list li a:hover {
+          text-decoration: underline; /* add an underline to the list link on hover */
+          text-align: justify;
+      }
+  
+      .social {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+      }
+  
+      .social a {
+          display: block;
+          width: 40px;
+          height: 40px;
+          margin: 0 10px;
+      }
+  
+      .social a img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* scale and fit images */
+      }
+  
+      .section { width: 100%; 
+        padding: 20px; 
+      }
+  
+      .row {
+          display: flex; /* use flexbox to arrange the columns */
+      }
+      
+      .column {
+          width: 50%; /* set the column width to half of the row width */
+          padding: 10px; /* add some padding around the column */
+      }
+      
+      .column img {
+          width: 100%; /* set the image width to the full column width */
+          height: auto; /* adjust the image height to maintain aspect ratio */
+          object-fit: cover; /* scale and crop the image to fit the column */
+      }
+      
+      .bg-text {
+          background-color: #0daec0; /* Black w/opacity/see-through */
+          /*        background-image: url("images/dna6.jpeg"); Black w/opacity/see-through */
+          color: white;
+          font-weight: bold;
+          font-size: 35px;
+          width: absolute;
+          padding: 50px;
+          text-align: center;
+  
         }
-    </style>
-</head>
-<body>
-    <!-- Add an id for the top of the page -->
-    <div id="top"></div>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Dr Deepak Sharma</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="research.html" class = "active">Research</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-
-        <img class="background" src="images/dna3.jpeg" alt="Aleq">
-
-        <div class="bg-text">Welcome to my webpage! I am Dr Deepak Sharma</div>
-
+  
+        img.background {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          -webkit-filter: blur(8px); /* Safari 6.0 - 9.0 */
+          filter: blur(8px);
+          }
+      </style>
+  </head>
+  <body>
+      <!-- Add an id for the top of the page -->
+      <div id="top"></div>
+      <div class="container">
+          <div class="header">
+              <div class="logo">Dr Deepak Sharma</div>
+              <ul class="menu">
+                  <li><a href="index.html" class = "active">Home</a></li>
+                  <li><a href="publications.html">Publications</a></li>
+                  <li><a href="research.html">Research</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          <div style="font-family:'Academy Engraved LET'" class="bg-text">Welcome to my webpage! I am Dr Deepak Sharma</div>
 
 
         <div class="content">
