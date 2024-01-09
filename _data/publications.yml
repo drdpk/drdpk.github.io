@@ -27,7 +27,7 @@ main:
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
+    # image: ./assets/img/teaser_example_2.png
     notes: Oral Presentation
 
   - title: DNA mediated Logic Gates.
@@ -37,7 +37,7 @@ main:
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
+    # image: ./assets/img/teaser_example_2.png
     notes: Oral Presentation
 
   - title: Computing using DNA.
@@ -47,18 +47,8 @@ main:
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
+    # image: ./assets/img/teaser_example_2.png
     notes: Poster Presentation
-
-  - title: Modeling of gelatin grafted PMMA polymerization.
-    authors: <strong>Sharma D.</strong> and Ramteke M.
-    conference_short: Conference
-    conference: International conference on Advanced Polymeric Materials, Kottayam, Kerala, India, 2013.
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
-    # code: https://github.com/MrGiovanni/ContinualLearning
-    # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Oral Presentation
 
   - title: DNA computing - methodologies and challenges.
     authors: <strong>Sharma D.</strong> and Ramteke M.
@@ -67,7 +57,7 @@ main:
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
+    image: ./assets/img/DNAMethod.png
     # notes: Early Accept
 
   - title: DNA Computing based Big Data Storage
@@ -77,6 +67,6 @@ main:
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
+    image: ./assets/img/DNA Computing Storage.png
     # notes: Early Accept
    
