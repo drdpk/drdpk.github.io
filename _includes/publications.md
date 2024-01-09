@@ -3,25 +3,6 @@
 <div class="publications">
 <ol class="bibliography">
 
-
-
-
-
-<li>
-<div class="pub-row">
-    {% if link.conference%} 
-    <abbr class="badge">{{ link.conference}}</abbr>
-    {% endif %}
-    {% if link.journal%} 
-    <abbr class="badge">{{ link.journal}}</abbr>
-    {% endif %}
-    {% if link.book_chapter%} 
-    <abbr class="badge">{{ link.book_chapter}}</abbr>
-    {% endif %}
-  </div>
-</li>
-
-
 {% for link in site.data.publications.main %}
 
 <li>
