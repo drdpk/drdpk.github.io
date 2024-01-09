@@ -23,44 +23,85 @@ main:
 
 
 
+  - title: In Vitro Identification of the Hamiltonian Cycle Using a Circular Structure Assisted DNA Computer.
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    journal_short: ACSCS
+    journal: ACS Combinatorial Science, 22, no. 5, (2020), 225 - 231.
+    pdf: https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
 
 
+  - title: A Note on Short-term Scheduling of Multi-grade Polymer Plant using DNA Computing.
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    journal_short: CERD
+    journal: Chemical Engineering Research and Design, 135 (2018), 78 - 93.
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
+
+  - title: Modeling of gelatin grafted PMMA polymerization.
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    # journal_short: CERD
+    # journal: Chemical Engineering Research and Design, 135 (2018), 78 - 93.
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
 
 
+  - title: DNA mediated Logic Gates.
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    conference_short: ICACCIT
+    conference: The Sixth International Conference on Advances in Computing, Communication, and Information Technology, Zurich, Switzerland, 2018.
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
 
+  - title: Computing using DNA..
+    authors: <strong>Sharma D.</strong> Fageria A., and Ramteke M.
+    conference_short: OH
+    conference: Open House, Indian Institute of Technology Delhi, New Delhi, India, 2016.
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
 
-      <div class="title"><a href="https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150">In Vitro Identification of the Hamiltonian Cycle Using a Circular Structure Assisted DNA Computer.</a></div>
-      <div class="author"><strong>Sharma D.</strong> and Ramteke M.</div>
-      <div class="periodical"><em>ACS Combinatorial Science, 22, no. 5, (2020): 225 - 231.</em>
-     
-     <div class="title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600">A Note on Short-term Scheduling of Multi-grade Polymer Plant using DNA Computing.</a></div>
-      <div class="author"><strong>Sharma D.</strong> and Ramteke M.</div>
-      <div class="periodical"><em>Chemical Engineering Research and Design, 135 (2018): 78 - 93.</em>
-     
-        <!-- <div class="title"><a href="https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150">Modeling of gelatin grafted PMMA polymerization.</a></div> -->
-        <div class="title">DNA mediated Logic Gates.</div>
-        <div class="author"><strong>Sharma D.</strong> and Ramteke M.</div>
-        <div class="periodical"><em>The Sixth International Conference on Advances in Computing, Communication, and Information Technology, Zurich, Switzerland, 2018.</em>
-        </div>
-     
-        <div class="title"><a href="https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150">Computing using DNA.</a></div>
-        <div class="author"><strong>Sharma D.</strong> Fageria A., and Ramteke M.</div>
-        <div class="periodical"><em>Open House, Indian Institute of Technology Delhi, New Delhi, India, 2016.</em>
-     
-     
-            <!-- <div class="title"><a href="https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150">Modeling of gelatin grafted PMMA polymerization.</a></div> -->
-            <div class="title">Modeling of gelatin grafted PMMA polymerization.</div>
-            <div class="author"><strong>Sharma D.</strong> and Ramteke M.</div>
-            <div class="periodical"><em>International conference on Advanced Polymeric Materials, Kottayam, Kerala, India, 2013.</em>
-     
-     
-              <div class="title"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9783527825424.ch2">DNA computing: methodologies and challenges.</div>
-              <div class="author"><strong>Sharma D.</strong> and Ramteke M.</div>
-              <div class="periodical"><em>DNA and RNA-Based Computing Systems, Wiley Online Library (2021): 15-29.</em>
-     
-     
-            <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
-                <div class="title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0065245822000766">DNA Computing based Big Data Storage.</div>
-                <div class="author"><strong>Sharma D.</strong> and Ramteke M.</div>
-                <div class="periodical"><em>Elsevier</em>
-     
+  - title: Modeling of gelatin grafted PMMA polymerization.
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    conference_short: ICAPM
+    conference: International conference on Advanced Polymeric Materials, Kottayam, Kerala, India, 2013.
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
+
+  - title: DNA computing - methodologies and challenges.
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    book_chapter_short: DRBCS
+    book_chapter: DNA and RNA-Based Computing Systems, Wiley Online Library (2021), 15-29.
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
+
+  - title: DNA Computing based Big Data Storage
+    authors: <strong>Sharma D.</strong> and Ramteke M.
+    book_chapter_short: Elsevier
+    book_chapter: Elsevier
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/teaser_example_2.png
+    # notes: Early Accept
+   
