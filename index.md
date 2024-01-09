@@ -1,7 +1,6 @@
 ---
 layout: homepage
 ---
-
 ## About Me
 
 I am Dr Deepak Sharma, a biotechnologist who is passionate about exploring the possibilities of DNA as a data storage medium. DNA is the molecule that stores the genetic information of all living organisms. It is also a very compact, stable, and versatile material that can store digital information for thousands of years. Imagine being able to store all the data in the world in a single drop of DNA!
@@ -9,7 +8,7 @@ I am Dr Deepak Sharma, a biotechnologist who is passionate about exploring the p
 ## Research Interests
 
 - **DNA Storage:** DNA based Data Storage, Encoding and Decoding
-- **DNA Computing:** Using DNA as a Computing Tool, 
+- **DNA Computing:** Using DNA as a Computing Tool
 - **Machine Learning:** Image Recognition, Image Classification, Transfer Learning
 
 ## News
