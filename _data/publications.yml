@@ -24,7 +24,7 @@ main:
 
   - title: Modeling of gelatin grafted PMMA polymerization.
     authors: <strong>Sharma D.</strong> and Ramteke M.
-    # journal_short: Journal
+    journal_short: Conference
     # journal: Chemical Engineering Research and Design, 135 (2018), 78 - 93.
     pdf: ./assets/files/Modeling_of_gelatin_grafted_PMMA_polymer.pdf
     # code: https://github.com/MrGiovanni/ContinualLearning
@@ -56,7 +56,7 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     book_chapter_short: Book Chapter
     book_chapter: DNA and RNA-Based Computing Systems, Wiley Online Library (2021), 15-29.
-    pdf: .assets/files/DNA Computing Methodologies and Challenges.pdf
+    pdf: ./assets/files/DNA Computing Methodologies and Challenges.pdf
     link: https://onlinelibrary.wiley.com/doi/abs/10.1002/9783527825424.ch2
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
