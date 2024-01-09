@@ -4,7 +4,8 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     journal_short: Journal
     journal: ACS Combinatorial Science, 22, no. 5, (2020), 225 - 231.
-    pdf: https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150
+    pdf: ./assets/files/In Vitro Identification of the Hamiltonian Cycle Using a Circular structure assisted dna computer.pdf
+    link: https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/InVitro.jpeg
@@ -14,7 +15,8 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     journal_short: Journal
     journal: Chemical Engineering Research and Design, 135 (2018), 78 - 93.
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    pdf: .assets/files/A note on short-term scheduling of multi-gradepolymer plant using DNA computing.pdf
+    link: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/AShortNote.jpg
@@ -24,7 +26,7 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     # journal_short: Journal
     # journal: Chemical Engineering Research and Design, 135 (2018), 78 - 93.
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    pdf: ./assets/files/Modeling_of_gelatin_grafted_PMMA_polymer.pdf
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     # image: ./assets/img/teaser_example_2.png
@@ -34,17 +36,17 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     conference_short: Conference
     conference: The Sixth International Conference on Advances in Computing, Communication, and Information Technology, Zurich, Switzerland, 2018.
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    # image: ./assets/img/teaser_example_2.png
+    image: ./assets/img/DNA mediated Logic Gates.png
     notes: Oral Presentation
 
   - title: Computing using DNA.
     authors: <strong>Sharma D.</strong> Fageria A., and Ramteke M.
     conference_short: Conference
     conference: Open House, Indian Institute of Technology Delhi, New Delhi, India, 2016.
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    # pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     # image: ./assets/img/teaser_example_2.png
@@ -54,7 +56,8 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     book_chapter_short: Book Chapter
     book_chapter: DNA and RNA-Based Computing Systems, Wiley Online Library (2021), 15-29.
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    pdf: .assets/files/DNA Computing Methodologies and Challenges.pdf
+    link: https://onlinelibrary.wiley.com/doi/abs/10.1002/9783527825424.ch2
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/DNAMethod.png
@@ -64,7 +67,8 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     book_chapter_short: Book Chapter
     book_chapter: Elsevier
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
+    pdf: .assets/files/DNA computing-based Big Data Storage.pdf
+    link: https://www.sciencedirect.com/science/article/abs/pii/S0065245822000766
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
     image: ./assets/img/DNA Computing Storage.png
