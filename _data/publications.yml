@@ -29,7 +29,7 @@ main:
     pdf: ./assets/files/Modeling_of_gelatin_grafted_PMMA_polymer.pdf
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    # image: ./assets/img/teaser_example_2.png
+    image: ./assets/img/White.png
     notes: Oral Presentation
 
   - title: DNA mediated Logic Gates.
@@ -49,7 +49,7 @@ main:
     # pdf: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    # image: ./assets/img/teaser_example_2.png
+    image: ./assets/img/White.png
     notes: Poster Presentation
 
   - title: DNA computing - methodologies and challenges.
