@@ -5,6 +5,21 @@
 
 
 
+<div class="pub-row">
+    {% if link.conference%} 
+    <abbr class="badge">{{ link.conference}}</abbr>
+    {% endif %}
+    {% if link.journal%} 
+    <abbr class="badge">{{ link.journal}}</abbr>
+    {% endif %}
+    {% if link.book_chapter%} 
+    <abbr class="badge">{{ link.book_chapter}}</abbr>
+    {% endif %}
+  </div>
+
+
+
+
 <h4 style="margin:0 10px 0;">Conference</h4>
 
 
