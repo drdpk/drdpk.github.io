@@ -15,7 +15,7 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     journal_short: Journal
     journal: Chemical Engineering Research and Design, 135 (2018), 78 - 93.
-    pdf: .assets/files/A note on short-term scheduling of multi-gradepolymer plant using DNA computing.pdf
+    pdf: ./assets/files/A note on short-term scheduling of multi-gradepolymer plant using DNA computing.pdf
     link: https://www.sciencedirect.com/science/article/abs/pii/S0263876218302600
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
@@ -67,7 +67,7 @@ main:
     authors: <strong>Sharma D.</strong> and Ramteke M.
     book_chapter_short: Book Chapter
     book_chapter: Elsevier
-    pdf: .assets/files/DNA computing-based Big Data Storage.pdf
+    pdf: ./assets/files/DNA computing-based Big Data Storage.pdf
     link: https://www.sciencedirect.com/science/article/abs/pii/S0065245822000766
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
