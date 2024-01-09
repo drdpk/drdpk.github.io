@@ -7,7 +7,7 @@ main:
     pdf: https://pubs.acs.org/doi/abs/10.1021/acscombsci.9b00150
     # code: https://github.com/MrGiovanni/ContinualLearning
     # bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
+    image: ./assets/img/InVitro.jpeg
     # notes: Early Accept
 
   - title: A Note on Short-term Scheduling of Multi-grade Polymer Plant using DNA Computing.
