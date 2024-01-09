@@ -5,10 +5,6 @@
 
 {% for link in site.data.publications.main %}
 
-
-<li><ahref="https://scholar.google.com/citations?user=pAE0aXAAAAAJ&hl=en">Google Scholar</a></li>
-
-
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
