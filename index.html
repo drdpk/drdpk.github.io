@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Sharma - Freelance Data Scientist & Bioinformatics Expert</title>
+    <title>Deepak Sharma - Data Scientist & Bioinformatics Expert</title>
     <style>
-        /* Vibrant Color Palette */
+        /* Ultra-Vibrant Color Palette */
         :root {
-            --primary: #4f46e5; /* Deep Indigo */
-            --secondary: #06b6d4; /* Bright Cyan */
-            --accent: #f43f5e; /* Rose/Coral */
-            --dark: #0f172a; /* Slate Dark */
+            --primary: #6366f1; /* Bright Indigo */
+            --secondary: #0ea5e9; /* Vivid Sky Blue */
+            --accent-1: #ec4899; /* Neon Pink */
+            --accent-2: #8b5cf6; /* Vivid Purple */
+            --dark: #0f172a;
             --light-bg: #f8fafc;
             --text-main: #334155;
+            --card-bg: rgba(255, 255, 255, 0.95);
         }
 
         /* Base Styles */
@@ -27,36 +29,51 @@
             padding: 0;
             color: var(--text-main);
             background-color: var(--light-bg);
+            overflow-x: hidden;
         }
         
         a {
             text-decoration: none;
             color: var(--primary);
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
-        a:hover {
-            color: var(--accent);
-        }
-
         /* Navigation */
         nav {
-            background: var(--dark);
-            padding: 1rem 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
             text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         nav a {
             color: #fff;
             margin: 0 15px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            font-weight: 700;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            position: relative;
+        }
+
+        /* Nav Link Underline Animation */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-1);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         nav a:hover {
@@ -65,152 +82,220 @@
 
         /* Layout Containers */
         .container {
-            max-width: 1050px;
+            max-width: 1100px;
             margin: auto;
             padding: 2rem;
         }
 
         .section {
-            padding: 5rem 0;
-            border-bottom: 2px dashed #e2e8f0;
-        }
-
-        /* Typography */
-        h1, h2, h3 {
-            color: var(--dark);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
+            padding: 6rem 0;
             position: relative;
         }
 
-        /* Hero Section & Animations */
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--dark);
+            background: linear-gradient(to right, var(--primary), var(--accent-1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- Animations --- */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(236, 72, 153, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+        }
+
+        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 8rem 2rem;
-            /* Vibrant Gradient Background */
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 10rem 2rem;
+            /* Animated Gradient Background */
+            background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent-2), var(--accent-1));
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
             color: white;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            position: relative;
         }
         
         .hero h1 {
             color: white;
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin-bottom: 0.5rem;
             opacity: 0;
-            animation: fadeInUp 0.8s ease-out forwards;
+            animation: fadeInUp 1s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero p {
-            font-size: 1.3rem;
-            color: #e0f2fe;
-            max-width: 650px;
-            margin: 0 auto 2.5rem auto;
+            font-size: 1.4rem;
+            color: #f8fafc;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
             opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
         .btn {
             display: inline-block;
-            background: var(--accent);
+            background: var(--accent-1);
             color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px; /* Pill shape for a modern look */
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 14px 0 rgba(244, 63, 94, 0.39);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             opacity: 0;
-            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+            animation: fadeInUp 1s ease-out 0.6s forwards, pulseGlow 2s infinite;
             transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background: #e11d48;
-            color: #fff;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 6px 20px 0 rgba(244, 63, 94, 0.5);
+            background: #be185d;
+            transform: translateY(-5px) scale(1.05);
+            color: white;
         }
 
         /* Grid Layouts */
         .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
+        /* Colorful Cards with Floating Animation */
         .card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border-top: 4px solid transparent;
-            transition: all 0.3s ease;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-bottom: 5px solid var(--primary);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: float 6s ease-in-out infinite;
         }
 
+        /* Stagger card float animations slightly */
+        .card:nth-child(2) { animation-delay: 1s; border-bottom-color: var(--secondary); }
+        .card:nth-child(3) { animation-delay: 2s; border-bottom-color: var(--accent-1); }
+        .card:nth-child(4) { animation-delay: 3s; border-bottom-color: var(--accent-2); }
+
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-top: 4px solid var(--secondary); /* Colorful top border on hover */
+            transform: translateY(-15px) scale(1.03) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .card h3 {
-            color: var(--primary);
+            color: var(--dark);
             margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Experience Cards Special Styling */
+        .experience-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 6px solid var(--accent-2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateX(10px);
+            border-left-color: var(--accent-1);
         }
 
         /* Publications List */
         .publications-list li {
-            background: #fff;
-            margin-bottom: 15px;
-            padding: 20px;
-            border-left: 5px solid var(--secondary);
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-            transition: transform 0.2s ease;
+            background: white;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .publications-list li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--secondary), var(--primary));
+            transition: width 0.3s ease;
         }
 
         .publications-list li:hover {
-            transform: translateX(10px);
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .publications-list li:hover::before {
+            width: 8px;
         }
 
         /* Footer */
         footer {
             background: var(--dark);
-            color: #94a3b8;
+            color: #cbd5e1;
             text-align: center;
-            padding: 4rem 0 2rem 0;
+            padding: 5rem 0 3rem 0;
+            position: relative;
         }
         
         footer h2 {
             color: #fff;
+            background: none;
+            -webkit-text-fill-color: #fff;
         }
 
         footer a {
             color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
         footer a:hover {
-            color: var(--accent);
+            color: var(--accent-1);
+            text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
             .hero {
                 clip-path: none;
-                padding: 6rem 1.5rem;
+                padding: 7rem 1.5rem;
             }
+            .hero h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -225,8 +310,8 @@
     </nav>
 
     <header class="hero">
-        <h1>Deepak Sharma [cite: 1]</h1>
-        <p>Freelance Data Scientist [cite: 22] & Bioinformatics Expert[cite: 102]. Bridging the gap between Machine Learning [cite: 94], NLP [cite: 24], and DNA Data Storage[cite: 15].</p>
+        <h1>Deepak Sharma</h1>
+        <p>Freelance Data Scientist & Bioinformatics Expert. Bridging the gap between Machine Learning, NLP, and DNA Data Storage.</p>
         <a href="#contact" class="btn">Get in Touch</a>
     </header>
 
@@ -234,51 +319,53 @@
         
         <section id="about" class="section">
             <h2>About Me</h2>
-            <p>I am a researcher and data scientist specializing in the intersection of computational models and molecular biology[cite: 47, 94]. With extensive experience ranging from predictive healthcare models [cite: 32, 33] to establishing advanced wet labs[cite: 15], I offer highly technical freelance services to innovative biotechnology and data-driven companies.</p>
+            <div style="font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>I am a researcher and data scientist specializing in the intersection of computational models and molecular biology. With extensive experience ranging from predictive healthcare models to establishing advanced wet labs, I offer highly technical freelance services to innovative biotechnology and data-driven companies.</p>
+            </div>
         </section>
 
         <section id="services" class="section">
             <h2>Freelance Services</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Bioinformatics & Data Storage</h3>
-                    <p>Expertise in developing DNA storage toolkits [cite: 17], trace reconstruction algorithms [cite: 21], and primer design using NUPACK and machine learning[cite: 20, 116].</p>
+                    <h3>Bioinformatics & Storage</h3>
+                    <p>Expertise in developing DNA storage toolkits, trace reconstruction algorithms, and primer design using NUPACK and machine learning.</p>
                 </div>
                 <div class="card">
                     <h3>NLP for Intellectual Property</h3>
-                    <p>Development of natural language processing models for patent data curation, standardization, and quality classification[cite: 24, 28, 29].</p>
+                    <p>Development of natural language processing models for patent data curation, standardization, and quality classification.</p>
                 </div>
                 <div class="card">
                     <h3>Healthcare Machine Learning</h3>
-                    <p>Designing Deep Neural Networks for early disease detection, medical image analysis, and segmentation[cite: 32, 33, 36, 96, 97].</p>
+                    <p>Designing Deep Neural Networks for early disease detection, medical image analysis, and segmentation.</p>
                 </div>
                 <div class="card">
                     <h3>Laboratory Consulting</h3>
-                    <p>Strategic setup and protocol establishment for DNA computing and storage facilities, backed by direct institutional experience[cite: 146, 148, 154].</p>
+                    <p>Strategic setup and protocol establishment for DNA computing and storage facilities, backed by direct institutional experience.</p>
                 </div>
             </div>
         </section>
 
         <section id="experience" class="section">
             <h2>Recent Professional Experience</h2>
-            <div class="card" style="margin-bottom: 30px;">
-                <h3>Research Fellow [cite: 13]</h3>
-                <p><strong>National University of Singapore, Singapore</strong> | Feb 2023 - Mar 2025 [cite: 14]</p>
-                <p>Established and Led DNA Storage Lab at School of Computing, National University of Singapore[cite: 15]. Developed a DNA storage toolkit [cite: 17] and designed experiments for True Random Numbers via DNA/RNA sequencing[cite: 19].</p>
+            <div class="experience-card">
+                <h3 style="color: var(--primary); margin-top: 0;">Research Fellow</h3>
+                <p><strong>National University of Singapore, Singapore</strong> | Feb 2023 - Mar 2025</p>
+                <p>Established and Led DNA Storage Lab at School of Computing, National University of Singapore. Developed a DNA storage toolkit and designed experiments for True Random Numbers via DNA/RNA sequencing.</p>
             </div>
-            <div class="card">
-                <h3>Data Scientist [cite: 22]</h3>
-                <p><strong>Triangle IP, Denver, Colorado, United States (remote)</strong> | Jul 2022 - Jan 2023 [cite: 23]</p>
-                <p>Developed NLP models for data curation and standardization of the data associated with patent applications[cite: 24].</p>
+            <div class="experience-card">
+                <h3 style="color: var(--accent-2); margin-top: 0;">Data Scientist</h3>
+                <p><strong>Triangle IP, Denver, Colorado, United States (remote)</strong> | Jul 2022 - Jan 2023</p>
+                <p>Developed NLP models for data curation and standardization of the data associated with patent applications.</p>
             </div>
         </section>
 
         <section id="publications" class="section">
             <h2>Selected Publications</h2>
             <ul class="publications-list" style="list-style-type: none; padding: 0;">
-                <li>Sharma P., Goh G., Gao B., Ou L., Lin D., Sharma D., Jevdjic D., DNA Storage Toolkit: A Modular End-to-End DNA Data Storage Codec and Simulator, IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS), (2024), 144-155. [cite: 80]</li>
-                <li>Sharma D. and Ramteke M., DNA Computing based Big Data Storage. Elsevier, Advances in Computers, 129 (2023): 249-279. [cite: 78]</li>
-                <li>Sharma D. and Ramteke M., In Vitro Identification of the Hamiltonian Cycle Using a Circular Structure Assisted DNA Computer, ACS Combinatorial Science, 22, no. 5, (2020): 225-231. [cite: 64]</li>
+                <li><strong>Sharma P., Goh G., Gao B., Ou L., Lin D., Sharma D., Jevdjic D.</strong> - DNA Storage Toolkit: A Modular End-to-End DNA Data Storage Codec and Simulator, <em>IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)</em>, (2024), 144-155.</li>
+                <li><strong>Sharma D. and Ramteke M.</strong> - DNA Computing based Big Data Storage. <em>Elsevier, Advances in Computers</em>, 129 (2023): 249-279.</li>
+                <li><strong>Sharma D. and Ramteke M.</strong> - In Vitro Identification of the Hamiltonian Cycle Using a Circular Structure Assisted DNA Computer, <em>ACS Combinatorial Science</em>, 22, no. 5, (2020): 225-231.</li>
             </ul>
         </section>
 
@@ -286,9 +373,9 @@
 
     <footer id="contact">
         <h2>Ready to Collaborate?</h2>
-        <p>Email: <a href="mailto:drdpk@hotmail.com">drdpk@hotmail.com</a> [cite: 6]</p>
-        <p>Phone: +91 8818080111 [cite: 2]</p>
-        <p style="margin-top: 2rem;"><small>&copy; 2026 Deepak Sharma. All rights reserved.</small></p>
+        <p style="margin-bottom: 10px;">Email: <a href="mailto:drdpk@hotmail.com">drdpk@hotmail.com</a></p>
+        <p>Phone: <a href="tel:+918818080111">+91 8818080111</a></p>
+        <p style="margin-top: 3rem; color: #64748b;"><small>&copy; 2026 Deepak Sharma. All rights reserved.</small></p>
     </footer>
 
 </body>
