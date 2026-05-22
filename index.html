@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Sharma - Data Scientist & Bioinformatics Expert</title>
+    <title>Deepak Sharma - Freelance Data Scientist & Bioinformatics Expert</title>
     <style>
         /* Ultra-Vibrant Color Palette */
         :root {
@@ -48,25 +48,28 @@
             z-index: 1000;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         nav a {
             color: #fff;
-            margin: 0 15px;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             font-size: 0.85rem;
             position: relative;
+            padding: 5px;
         }
 
-        /* Nav Link Underline Animation */
         nav a::after {
             content: '';
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
             background-color: var(--accent-1);
             transition: width 0.3s ease;
@@ -130,7 +133,6 @@
         .hero {
             text-align: center;
             padding: 10rem 2rem;
-            /* Animated Gradient Background */
             background: linear-gradient(-45deg, var(--primary), var(--secondary), var(--accent-2), var(--accent-1));
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
@@ -168,9 +170,12 @@
             font-size: 1.2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn.animated {
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.6s forwards, pulseGlow 2s infinite;
-            transition: all 0.3s ease;
         }
 
         .btn:hover {
@@ -186,7 +191,7 @@
             gap: 30px;
         }
 
-        /* Colorful Cards with Floating Animation */
+        /* Services Cards */
         .card {
             background: var(--card-bg);
             padding: 35px;
@@ -197,7 +202,6 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        /* Stagger card float animations slightly */
         .card:nth-child(2) { animation-delay: 1s; border-bottom-color: var(--secondary); }
         .card:nth-child(3) { animation-delay: 2s; border-bottom-color: var(--accent-1); }
         .card:nth-child(4) { animation-delay: 3s; border-bottom-color: var(--accent-2); }
@@ -213,21 +217,84 @@
             font-size: 1.5rem;
         }
 
-        /* Experience Cards Special Styling */
-        .experience-card {
+        /* Experience & Education Cards Special Styling */
+        .list-card {
             background: white;
             padding: 30px;
             border-radius: 12px;
-            margin-bottom: 30px;
-            border-left: 6px solid var(--accent-2);
+            margin-bottom: 25px;
+            border-left: 6px solid var(--primary);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
         }
         
-        .experience-card:hover {
+        .list-card:hover {
             transform: translateX(10px);
-            border-left-color: var(--accent-1);
         }
+
+        .list-card.edu {
+            border-left-color: var(--secondary);
+        }
+
+        .list-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .date-location {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Skills Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            flex: 1 1 300px;
+        }
+
+        .skill-category h3 {
+            text-align: center;
+            color: var(--dark);
+            border-bottom: 2px dashed #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .skill-tag.bio { background: #e0f2fe; color: var(--secondary); }
+        .skill-tag.bio:hover { background: var(--secondary); color: white; }
+
+        .skill-tag.exp { background: #fce7f3; color: var(--accent-1); }
+        .skill-tag.exp:hover { background: var(--accent-1); color: white; }
 
         /* Publications List */
         .publications-list li {
@@ -275,17 +342,7 @@
             color: #fff;
             background: none;
             -webkit-text-fill-color: #fff;
-        }
-
-        footer a {
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        footer a:hover {
-            color: var(--accent-1);
-            text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+            margin-bottom: 1.5rem;
         }
 
         /* Responsive */
@@ -303,16 +360,18 @@
 
     <nav>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#services">Services</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <header class="hero">
         <h1>Deepak Sharma</h1>
-        <p>Data Scientist & Bioinformatics Expert. Bridging the gap between Machine Learning, NLP, and DNA Data Storage.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
+        <p>Freelance Data Scientist & Bioinformatics Expert. Bridging the gap between Machine Learning, NLP, and DNA Data Storage.</p>
+        <a href="#contact" class="btn animated">Get in Touch</a>
     </header>
 
     <div class="container">
@@ -320,12 +379,55 @@
         <section id="about" class="section">
             <h2>About Me</h2>
             <div style="font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto;">
-                <p>I am a researcher and data scientist specializing in the intersection of computational models and molecular biology. With extensive experience ranging from predictive healthcare models to establishing advanced wet labs, I offer highly technical services to innovative biotechnology and data-driven companies.</p>
+                <p>I am a researcher and data scientist specializing in the intersection of computational models and molecular biology. With extensive experience ranging from predictive healthcare models to establishing advanced wet labs, I offer highly technical freelance services to innovative biotechnology and data-driven companies.</p>
+                <p>Currently founding <strong>HelixDecypher</strong> in Bhopal, I am available for global remote consulting and project-based work.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>ML & Programming</h3>
+                    <div style="text-align: center;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">NLP Modeling</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">HPC Clusters</span>
+                        <span class="skill-tag">NumPy & Pandas</span>
+                        <span class="skill-tag">Image Processing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Bioinformatics Data</h3>
+                    <div style="text-align: center;">
+                        <span class="skill-tag bio">NUPACK</span>
+                        <span class="skill-tag bio">NGS Data Analysis</span>
+                        <span class="skill-tag bio">Variant Calling</span>
+                        <span class="skill-tag bio">Sequence Alignment</span>
+                        <span class="skill-tag bio">Biopython</span>
+                        <span class="skill-tag bio">Genome Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Experimental / Wet Lab</h3>
+                    <div style="text-align: center;">
+                        <span class="skill-tag exp">Oxford Nanopore Sequencing</span>
+                        <span class="skill-tag exp">PCR</span>
+                        <span class="skill-tag exp">Gel Electrophoresis</span>
+                        <span class="skill-tag exp">Nucleic Acid Isolation</span>
+                        <span class="skill-tag exp">Spectroscopy (UV-Vis)</span>
+                        <span class="skill-tag exp">AFM</span>
+                        <span class="skill-tag exp">Qubit</span>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="services" class="section">
-            <h2>Services</h2>
+            <h2>Freelance Services</h2>
             <div class="grid">
                 <div class="card">
                     <h3>Bioinformatics & Storage</h3>
@@ -347,16 +449,52 @@
         </section>
 
         <section id="experience" class="section">
-            <h2>Recent Professional Experience</h2>
-            <div class="experience-card">
-                <h3 style="color: var(--primary); margin-top: 0;">Research Fellow</h3>
-                <p><strong>National University of Singapore, Singapore</strong> | Feb 2023 - Mar 2025</p>
+            <h2>Professional Experience</h2>
+            
+            <div class="list-card" style="border-left-color: var(--primary);">
+                <h3 style="color: var(--primary);">Research Fellow</h3>
+                <div class="date-location">National University of Singapore | Feb 2023 - Mar 2025</div>
                 <p>Established and Led DNA Storage Lab at School of Computing, National University of Singapore. Developed a DNA storage toolkit and designed experiments for True Random Numbers via DNA/RNA sequencing.</p>
             </div>
-            <div class="experience-card">
-                <h3 style="color: var(--accent-2); margin-top: 0;">Data Scientist</h3>
-                <p><strong>Triangle IP, Denver, Colorado, United States (remote)</strong> | Jul 2022 - Jan 2023</p>
+            
+            <div class="list-card" style="border-left-color: var(--secondary);">
+                <h3 style="color: var(--secondary);">Data Scientist</h3>
+                <div class="date-location">Triangle IP, Denver, CO (Remote) | Jul 2022 - Jan 2023</div>
                 <p>Developed NLP models for data curation and standardization of the data associated with patent applications.</p>
+            </div>
+
+            <div class="list-card" style="border-left-color: var(--accent-1);">
+                <h3 style="color: var(--accent-1);">Research Associate (Intellectual Property)</h3>
+                <div class="date-location">Invent IP, Gurgaon, India | Nov 2021 - Jun 2022</div>
+                <p>Conducted patentability, novelty, and bio sequence searches. Developed NLP models to summarize patents and classify them based on quality.</p>
+            </div>
+
+            <div class="list-card" style="border-left-color: var(--accent-2);">
+                <h3 style="color: var(--accent-2);">Research Associate (Healthcare ML)</h3>
+                <div class="date-location">Indian Institute of Technology Delhi | Mar 2020 - Feb 2021</div>
+                <p>Developed early pancreatic cancer detection models and acute decompensated heart failure prediction models using Deep Neural Networks in collaboration with major healthcare systems.</p>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            
+            <div class="list-card edu">
+                <h3 style="color: var(--dark);">Ph.D., Chemical Engineering</h3>
+                <div class="date-location">Indian Institute of Technology (IIT) Delhi | 2014 - 2019</div>
+                <p><strong>Topic:</strong> Computing using DNA systems. Developed a hybrid model of DNA computing and designed DNA based universal logic gates.</p>
+            </div>
+
+            <div class="list-card edu">
+                <h3 style="color: var(--dark);">M.Tech, Pulp and Paper Technology</h3>
+                <div class="date-location">Indian Institute of Technology (IIT) Roorkee | 2011 - 2013</div>
+                <p><strong>Topic:</strong> Experimental and Simulation Study of Grafting of Gelatin on Polymethyl methacrylate (PMMA) in Emulsion Reactor.</p>
+            </div>
+
+            <div class="list-card edu">
+                <h3 style="color: var(--dark);">B.Tech, Biotechnology</h3>
+                <div class="date-location">Maharshi Dayanand University Rohtak | 2006 - 2010</div>
+                <p>Synthesized peptide of the envelope protein of chikungunya virus by using solid-phase peptide synthesis during B.Tech project.</p>
             </div>
         </section>
 
@@ -373,9 +511,11 @@
 
     <footer id="contact">
         <h2>Ready to Collaborate?</h2>
-        <p style="margin-bottom: 10px;">Email: <a href="mailto:drdpk@hotmail.com">drdpk@hotmail.com</a></p>
-        <p>Phone: <a href="tel:+918818080111">+91 8818080111</a></p>
-        <p style="margin-top: 3rem; color: #64748b;"><small>&copy; 2026 Deepak Sharma. All rights reserved.</small></p>
+        <p style="margin-bottom: 30px; font-size: 1.1rem;">Feel free to reach out to discuss your project needs.</p>
+        
+        <a href="mailto:drdpk@hotmail.com" class="btn">Send Me an Email</a>
+        
+        <p style="margin-top: 4rem; color: #64748b;"><small>&copy; 2026 Deepak Sharma. All rights reserved.</small></p>
     </footer>
 
 </body>
